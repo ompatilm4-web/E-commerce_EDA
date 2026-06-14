@@ -9,3 +9,8 @@ Q3. Who are the most valuable customers?
 Q4. What factors affect sales?
 
 Q5. Can future sales be predicted?
+
+
+
+
+# Conclusion To the Goals 
