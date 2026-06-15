@@ -13,4 +13,3 @@ Q5. Can future sales be predicted?
 
 
 
-# Conclusion To the Goals 
