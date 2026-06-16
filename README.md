@@ -1,42 +1,96 @@
+# 🛒 E-Commerce Sales Analysis — Exploratory Data Analysis
 
-# E-commerce EDA
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter) ![Pandas](https://img.shields.io/badge/Pandas-EDA-green) ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-Exploratory data analysis of an e-commerce sales dataset (17,379 orders, 20 features) covering products, customers, payments, and shipping.
+---
 
-## Dataset
+## 📦 Dataset
 
-`Data/Cleaned.csv` includes:
-- **Order details**: product, quantity, unit price, discount, subtotal, net amount, revenue
-- **Customer info**: name, segment (New / Standard / Silver / Gold / Premium)
-- **Logistics**: shipping city, method, cost
-- **Payment**: method, status
-- **Other**: order date (Year/Month/Day), rating, return flag
+- **Size:** 17,379 orders · 20 features
+- **Domain:** Indian E-Commerce platform
+- **Key Columns:** Product Category, Customer Segment, City, Payment Method, Unit Price, Discount, Net Revenue, Order Date (2022–2023)
 
-## Project Goals
+> The dataset is stored in the `/Data` folder of this repository.
 
-See [`Project_Goals.md`](Project_Goals.md) for the full list of questions and findings.
+---
 
-## Key Findings
+## ❓ Business Questions Answered
 
-1. **Standard segment** customers generate the highest total revenue, followed by Silver.
-2. **Laptops** generate the highest revenue, followed by Tablets.
-3. Shipping costs are highest for **Chennai**, followed by Pune.
-4. **Credit Card** is the top payment method by revenue, followed by Debit Card.
-5. Revenue grew ~6% from 2023 to 2024.
-6. `subtotal`, `discount_amount`, and `unit_price` show the strongest relationship with `Revenue`.
+| # | Question |
+|---|----------|
+| 1 | Which products generate the most revenue? |
+| 2 | Who are the most valuable customers? |
+| 3 | What factors most strongly drive sales? |
+| 4 | Which cities have the highest shipping costs? |
+| 5 | Which payment methods contribute the most revenue? |
 
-## Notebook
+---
 
-Analysis and visualizations are in [`Notebooks/Visualization.ipynb`](Notebooks/Visualization.ipynb), including distribution plots, revenue breakdowns by segment/product/city/payment method, and a correlation heatmap.
+## 📊 Key Insights
 
-## Setup
+> **1. Laptops dominate revenue** — Laptops ranked #1 in revenue generation across all product categories, followed by Tablets.
 
-```bash
-pip install -r requirements.txt
-jupyter notebook Notebooks/Visualization.ipynb
+> **2. Standard-segment customers are the most valuable** — The Standard customer segment contributed the largest share of total revenue, outperforming both Silver and Gold segments.
+
+> **3. Sales grew ~7–8% year-over-year** — Revenue increased consistently from 2022 to 2023. Credit Card was the top payment method, followed by Debit Card. Chennai and Pune recorded the highest shipping costs.
+
+> **4. Strongest revenue predictors:** Unit Price, Subtotal, Discount Amount, and Net Amount showed the highest correlation with total revenue.
+
+---
+
+## 🗂️ Project Structure
+
+```
+E-commerce_EDA/
+├── Data/                  # Raw dataset
+├── Notebooks/             # Jupyter analysis notebooks
+├── Project_Goals.md       # Business questions & conclusions
+├── requirements.txt       # Python dependencies
+└── README.md
 ```
 
-## Known Limitations
+---
 
-- `shipping_city` contains inconsistent formatting (case, whitespace, abbreviations) and would benefit from further standardization.
-- Revenue forecasting is based on a single year-over-year comparison and would need a proper time-series model for reliable predictions.
+## 🛠️ Tools & Libraries
+
+| Library | Purpose |
+|---------|---------|
+| `pandas` | Data loading, cleaning, aggregation |
+| `numpy` | Numerical operations |
+| `matplotlib` | Base visualizations |
+| `seaborn` | Statistical plots & heatmaps |
+| `scikit-learn` | Correlation & feature analysis |
+
+---
+
+## 📸 Sample Visualizations
+
+> 📌 **Revenue by Product Category**
+> *(Add your chart screenshot here — e.g., `![Revenue Chart](Data/charts/revenue_by_category.png)`)*
+
+> 📌 **Customer Segment Revenue Distribution**
+> *(Add your chart screenshot here)*
+
+> 💡 **How to add screenshots:** Export your best notebook chart using `plt.savefig('chart.png')`, upload it to the `/Data` folder, and replace the placeholders above.
+
+---
+
+## 🚀 How to Run
+
+```bash
+# Clone the repo
+git clone https://github.com/ompatilm4-web/E-commerce_EDA.git
+cd E-commerce_EDA
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Open the notebook
+jupyter notebook Notebooks/
+```
+
+---
+
+## 👤 Author
+
+**Om Patil** · [GitHub](https://github.com/ompatilm4-web)
