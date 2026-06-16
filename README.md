@@ -93,4 +93,8 @@ jupyter notebook Notebooks/
 
 ## 👤 Author
 
+<<<<<<< HEAD
 **Om Patil** · [GitHub](https://github.com/ompatilm4-web)
+=======
+**Om Patil** · [GitHub](https://github.com/ompatilm4-web)
+>>>>>>> cf94dde55730bff32b14488c6aab0886cc9ad2ab
