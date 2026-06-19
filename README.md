@@ -1,95 +1,159 @@
-# 🛒 E-Commerce Sales Analysis — Exploratory Data Analysis
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter) ![Pandas](https://img.shields.io/badge/Pandas-EDA-green) ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=E-Commerce%20EDA&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Exploratory%20Data%20Analysis%20%7C%20Python%20%7C%20Pandas%20%7C%20Matplotlib%20%7C%20Seaborn&descAlignY=58&descSize=14&animation=fadeIn" width="100%"/>
 
----
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&pause=1000&color=6C8CFF&center=true&vCenter=true&width=650&lines=Uncovering+patterns+in+E-Commerce+data+%F0%9F%9B%92;Data+Cleaning+%E2%86%92+Analysis+%E2%86%92+Visualization+%F0%9F%93%8A;From+raw+transactions+to+business+insights+%F0%9F%92%A1;Built+as+a+portfolio+EDA+project+%F0%9F%93%81)](https://git.io/typing-svg)
 
-## 📦 Dataset
+<br/>
 
-- **Size:** 17,379 orders · 20 features
-- **Domain:** Indian E-Commerce platform
-- **Key Columns:** Product Category, Customer Segment, City, Payment Method, Unit Price, Discount, Net Revenue, Order Date (2022–2023)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge)](https://matplotlib.org)
+[![Seaborn](https://img.shields.io/badge/Seaborn-4c72b0?style=for-the-badge)](https://seaborn.pydata.org)
+[![Stars](https://img.shields.io/github/stars/ompatilm4-web/E-commerce_EDA?style=for-the-badge&color=fbbf24&logo=github)](https://github.com/ompatilm4-web/E-commerce_EDA/stargazers)
 
-> The dataset is stored in the `/Data` folder of this repository.
-
----
-
-## ❓ Business Questions Answered
-
-| # | Question |
-|---|----------|
-| 1 | Which products generate the most revenue? |
-| 2 | Who are the most valuable customers? |
-| 3 | What factors most strongly drive sales? |
-| 4 | Which cities have the highest shipping costs? |
-| 5 | Which payment methods contribute the most revenue? |
+</div>
 
 ---
 
-## 📊 Key Insights
+## 📌 About This Project
 
-> **1. Laptops dominate revenue** — Laptops ranked #1 in revenue generation across all product categories, followed by Tablets.
+This project performs **Exploratory Data Analysis (EDA)** on a real-world E-Commerce dataset — starting from raw, uncleaned transaction data and working through to meaningful business insights backed by visualizations.
 
-> **2. Standard-segment customers are the most valuable** — The Standard customer segment contributed the largest share of total revenue, outperforming both Silver and Gold segments.
+The full pipeline covered:
 
-> **3. Sales grew ~7–8% year-over-year** — Revenue increased consistently from 2022 to 2023. Credit Card was the top payment method, followed by Debit Card. Chennai and Pune recorded the highest shipping costs.
-
-> **4. Strongest revenue predictors:** Unit Price, Subtotal, Discount Amount, and Net Amount showed the highest correlation with total revenue.
+```
+Raw Data  →  Cleaning & Encoding  →  Analysis  →  Visualization  →  Insights
+```
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Repository Structure
 
 ```
 E-commerce_EDA/
-├── Data/                  # Raw dataset
-├── Notebooks/             # Jupyter analysis notebooks
-├── Project_Goals.md       # Business questions & conclusions
-├── requirements.txt       # Python dependencies
+│
+├── Data/
+│   ├── Raw_data.csv          ← Original dataset, unmodified
+│   ├── Cleaned.csv           ← After handling nulls, duplicates, type fixes
+│   └── Encoded_Data.csv      ← After categorical encoding for analysis
+│
+├── Notebooks/
+│   ├── Analysis.ipynb        ← Data cleaning, EDA, statistical summaries
+│   └── Visualization.ipynb   ← All charts, plots, and visual insights
+│
+├── Project_Goals.md          ← Objectives and scope of the project
+├── requirements.txt          ← Python dependencies
 └── README.md
 ```
 
 ---
 
-## 🛠️ Tools & Libraries
+## 📓 Notebooks
 
-| Library | Purpose |
-|---------|---------|
-| `pandas` | Data loading, cleaning, aggregation |
-| `numpy` | Numerical operations |
-| `matplotlib` | Base visualizations |
-| `seaborn` | Statistical plots & heatmaps |
-| `scikit-learn` | Correlation & feature analysis |
+### 🔍 `Analysis.ipynb`
 
----
+The core EDA notebook. Covers the full data preparation and analysis pipeline:
 
-## 📸 Sample Visualizations
-
-> 📌 **Revenue by Product Category**
-> *(Add your chart screenshot here — e.g., `![Revenue Chart](Data/charts/revenue_by_category.png)`)*
-
-> 📌 **Customer Segment Revenue Distribution**
-> *(Add your chart screenshot here)*
-
-> 💡 **How to add screenshots:** Export your best notebook chart using `plt.savefig('chart.png')`, upload it to the `/Data` folder, and replace the placeholders above.
+| Stage | What was done |
+|---|---|
+| **Data Loading** | Loaded `Raw_data.csv`, inspected shape, dtypes, and sample rows |
+| **Cleaning** | Handled missing values, removed duplicates, fixed data types |
+| **Encoding** | Encoded categorical columns → saved as `Encoded_Data.csv` |
+| **Univariate Analysis** | Distribution of individual features — sales, quantity, categories |
+| **Bivariate Analysis** | Relationships between price, quantity, revenue, customer segments |
+| **Statistical Summary** | `describe()`, correlation matrix, value counts, groupby aggregations |
 
 ---
 
-## 🚀 How to Run
+### 📊 `Visualization.ipynb`
 
+All visual outputs from the analysis, built with Matplotlib and Seaborn:
+
+| Chart Type | Insight explored |
+|---|---|
+| Bar charts | Top-selling products and categories |
+| Line plots | Sales trends over time |
+| Heatmap | Feature correlation matrix |
+| Boxplots | Price and quantity distribution, outlier detection |
+| Count plots | Category frequency breakdown |
+| Scatter plots | Price vs. quantity relationships |
+
+---
+
+## 📂 Data Pipeline
+
+| File | Description |
+|---|---|
+| `Raw_data.csv` | Original source data — untouched |
+| `Cleaned.csv` | Post-cleaning: nulls handled, types fixed, duplicates removed |
+| `Encoded_Data.csv` | Post-encoding: categorical columns converted for numerical analysis |
+
+> Each stage is saved separately so every step of the pipeline is reproducible and auditable.
+
+---
+
+## 🚀 Getting Started
+
+**1 — Clone**
 ```bash
-# Clone the repo
 git clone https://github.com/ompatilm4-web/E-commerce_EDA.git
 cd E-commerce_EDA
+```
 
-# Install dependencies
+**2 — Create virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+```
+
+**3 — Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-# Open the notebook
-jupyter notebook Notebooks/
+**4 — Open notebooks**
+```bash
+jupyter notebook
+```
+
+Start with `Notebooks/Analysis.ipynb`, then move to `Notebooks/Visualization.ipynb`.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| 🐍 Python | Core language |
+| 📓 Jupyter Notebook | Interactive analysis environment |
+| 🐼 Pandas | Data cleaning, manipulation, aggregation |
+| 📈 Matplotlib | Base plotting and chart customization |
+| 🎨 Seaborn | Statistical visualizations |
+
+---
+
+## 🤝 Contributing
+
+```bash
+git checkout -b improve/analysis-section
+git commit -m "Improve: add RFM segmentation to Analysis notebook"
+git push origin improve/analysis-section
 ```
 
 ---
 
-## 👤 Author
-**Om Patil** · [GitHub](https://github.com/ompatilm4-web)
+<div align="center">
+
+**Built and maintained by [Om Patil](https://github.com/ompatilm4-web)**
+
+[![GitHub](https://img.shields.io/badge/GitHub-ompatilm4--web-181717?style=flat-square&logo=github)](https://github.com/ompatilm4-web)
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=fadeIn" width="100%"/>
+
+> ⭐ If this project helped you understand EDA, drop a star — it helps others find it.
+
+</div>
